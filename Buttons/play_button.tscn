@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://chvs6ptgwbb6c"]
+
+[ext_resource type="Texture2D" uid="uid://rvccth1gdlhu" path="res://ObjectSprites/TitleScreenPlayButton1.png" id="1_1idr4"]
+[ext_resource type="Script" uid="uid://bp0eag5h58820" path="res://Buttons/play_button.gd" id="1_tk86b"]
+[ext_resource type="Texture2D" uid="uid://dpwhj8dqrivco" path="res://ObjectSprites/TitleScreenPlayButtonWhenInteracted.png" id="2_2u3yq"]
+
+[node name="PlayButton" type="Node2D"]
+script = ExtResource("1_tk86b")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_1idr4")
+texture_pressed = ExtResource("2_2u3yq")
+texture_hover = ExtResource("2_2u3yq")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

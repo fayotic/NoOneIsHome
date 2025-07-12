@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://thak5juyc8oo"]
+
+[ext_resource type="PackedScene" uid="uid://yjso3bt6so0m" path="res://Backgrounds/title_screen_background.tscn" id="1_klylv"]
+[ext_resource type="Script" uid="uid://8lkbuadmspa1" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+[ext_resource type="PackedScene" uid="uid://chvs6ptgwbb6c" path="res://Buttons/play_button.tscn" id="3_4gxqj"]
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_p3fck")
+
+[node name="TitleScreenBackground" parent="." instance=ExtResource("1_klylv")]
+position = Vector2(581, 328)
+
+[node name="PlayButton" parent="." instance=ExtResource("3_4gxqj")]
+position = Vector2(288, 310)
+scale = Vector2(2, 2)

@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=3 uid="uid://bw2jtv2mpr5r1"]
+
+[ext_resource type="Texture2D" uid="uid://s30qy126lg8s" path="res://Characters/Teddy.png" id="1_mt2n8"]
+
+[sub_resource type="Animation" id="Animation_03cyt"]
+resource_name = "TeddyWalkLeft"
+length = 3.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4, 0.533333, 0.666667, 0.8, 0.933333, 1.06667, 1.2, 1.33333, 1.46667, 1.6, 1.73333, 1.86667, 2, 2.13333, 2.26667, 2.4, 2.53333, 2.66667, 2.8, 2.93333, 3.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.124049, 0.267684, 0.409143, 0.53972, 0.668121, 0.807404, 0.937981, 1.07078, 1.20789, 1.33629, 1.46686, 1.60179, 1.74108, 1.87383, 2.00441, 2.13907, 2.26747, 2.40023, 2.53733, 2.66791, 2.80719, 2.94212, 3.06617),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(376, 236), Vector2(366, 236), Vector2(356, 236), Vector2(346, 236), Vector2(336, 236), Vector2(326, 236), Vector2(316, 236), Vector2(306, 236), Vector2(296, 236), Vector2(286, 236), Vector2(276, 236), Vector2(266, 236), Vector2(256, 236), Vector2(246, 236), Vector2(236, 236), Vector2(226, 236), Vector2(216, 236), Vector2(206, 236), Vector2(196, 236), Vector2(186, 236), Vector2(176, 236), Vector2(166, 236), Vector2(156, 236), Vector2(146, 236)]
+}
+
+[sub_resource type="Animation" id="Animation_1awd4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(376, 236)]
+}
+
+[sub_resource type="Animation" id="Animation_mt2n8"]
+resource_name = "TeddySitLeft"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [13]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t6ca2"]
+_data = {
+&"RESET": SubResource("Animation_1awd4"),
+&"TeddySitLeft": SubResource("Animation_mt2n8"),
+&"TeddyWalkLeft": SubResource("Animation_03cyt")
+}
+
+[node name="Teddy" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(376, 236)
+scale = Vector2(2, 2)
+texture = ExtResource("1_mt2n8")
+hframes = 4
+vframes = 4
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_t6ca2")
+}
