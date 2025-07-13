@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bmkmqtoex1mx7"
+path="res://.godot/imported/CutScene1Bedroom.dialogue-4be894518fa258961d4bfba0064fab5a.tres"
+
+[deps]
+
+source_file="res://Dialogue/CutScene1Bedroom.dialogue"
+dest_files=["res://.godot/imported/CutScene1Bedroom.dialogue-4be894518fa258961d4bfba0064fab5a.tres"]
+
+[params]
+
+defaults=true

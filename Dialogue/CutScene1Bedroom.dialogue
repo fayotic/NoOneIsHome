@@ -1,0 +1,16 @@
+~ start
+do wait(5)
+Teddy: Hello...
+Teddy: The air in here feels different than usual.
+Teddy: Do you feel the same way?
+Teddy: ...
+Teddy: Must just be me.
+Teddy: ... You know, the moon seems to be brighter and bigger than usual too.
+Teddy: It's pretty common for that to happen though...
+Teddy: Big, bright, yellow orb in the sky, it really makes the nights feel magical.
+Teddy: ...
+Teddy: I know you're sleeping. And you can't hear me.
+Teddy: But there's something I want to show you that I found, I think you'll find it interesting.
+Teddy: If you could hear me even a little, you should find me in the hallway.
+Teddy: It's something that might be bigger than the both of us.
+do transition()
